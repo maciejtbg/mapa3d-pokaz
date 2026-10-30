@@ -24,7 +24,9 @@
   .opis p { margin: 0; color: var(--mut); }
   .meta { margin-top: 10px; font-size: 13px; color: var(--mut); }
   .meta b { color: var(--txt); font-weight: 600; }
-  .siatka { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 8px 0 36px; }
+  .siatka { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 8px 0 36px; }
+  @media (max-width: 860px) { .siatka { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .siatka { grid-template-columns: 1fr; } }
   .karta { background: var(--pow); border: 1px solid var(--lin); border-radius: 12px; padding: 18px 20px; }
   .karta h3 { margin: 0 0 6px; font-size: 16px; }
   .karta p { margin: 0; color: var(--mut); font-size: 15px; }
