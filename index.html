@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa3D Grabber: podgląd dzienny i termowizyjny</title>
+<meta name="description" content="Krótkie filmy pokazowe programu Mapa3D Grabber: teren 3D z Gdyni w kanale dziennym i w widoku z kamery termowizyjnej głowicy obserwacyjnej.">
+<style>
+  :root { --tlo: #f4f5f7; --pow: #ffffff; --txt: #16191f; --mut: #5b6372; --lin: #dfe2e8; --akc: #d9531e; --cien: 0 1px 3px rgba(16,24,40,.08), 0 8px 24px rgba(16,24,40,.06); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --tlo: #0e1116; --pow: #161a21; --txt: #e8eaee; --mut: #9aa3b2; --lin: #262c36; --akc: #ff8a4c; --cien: none; } }
+  :root[data-theme="dark"] { --tlo: #0e1116; --pow: #161a21; --txt: #e8eaee; --mut: #9aa3b2; --lin: #262c36; --akc: #ff8a4c; --cien: none; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--tlo); color: var(--txt); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 40px 16px 56px; }
+  header { margin-bottom: 32px; }
+  .znak { display: inline-block; font: 600 12px/1 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--akc); margin-bottom: 12px; }
+  h1 { font-size: clamp(28px, 4.2vw, 42px); line-height: 1.15; margin: 0 0 14px; letter-spacing: -.01em; }
+  .wstep { color: var(--mut); font-size: 18px; max-width: 760px; margin: 0; }
+  .promo { margin-top: 18px; display: inline-block; padding: 6px 12px; border: 1px solid var(--lin); border-radius: 999px; font-size: 13px; color: var(--mut); background: var(--pow); }
+  .film { background: var(--pow); border: 1px solid var(--lin); border-radius: 14px; overflow: hidden; box-shadow: var(--cien); margin: 0 0 28px; }
+  .film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+  .opis { padding: 18px 22px 20px; }
+  .opis h2 { font-size: 21px; margin: 0 0 6px; }
+  .opis p { margin: 0; color: var(--mut); }
+  .meta { margin-top: 10px; font-size: 13px; color: var(--mut); }
+  .meta b { color: var(--txt); font-weight: 600; }
+  .siatka { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 8px 0 36px; }
+  .karta { background: var(--pow); border: 1px solid var(--lin); border-radius: 12px; padding: 18px 20px; }
+  .karta h3 { margin: 0 0 6px; font-size: 16px; }
+  .karta p { margin: 0; color: var(--mut); font-size: 15px; }
+  h2.sekcja { font-size: 24px; margin: 44px 0 12px; }
+  footer { border-top: 1px solid var(--lin); margin-top: 40px; padding-top: 18px; color: var(--mut); font-size: 14px; }
+  footer p { margin: 0 0 8px; }
+  .atr { font-weight: 600; color: var(--txt); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="znak">Mapa3D Grabber · Studio</div>
+    <h1>Teren 3D w kanale dziennym i w kamerze termowizyjnej</h1>
+    <p class="wstep">Krótkie filmy z programu Mapa3D Grabber: kwadrat terenu z Gdyni oglądany z głowicy obserwacyjnej na maszcie. Obraz termowizyjny nie jest przekolorowaną teksturą, tylko wynikiem modelu cieplnego terenu i symulacji kamery.</p>
+    <div class="promo">For promotional purposes only · Wyłącznie w celach promocyjnych</div>
+  </header>
+
+  <section class="film">
+    <video controls muted playsinline loop preload="metadata" poster="filmy/1-dzien-i-termowizja.jpg" aria-label="Film: kanał dzienny i termowizja">
+      <source src="filmy/1-dzien-i-termowizja.mp4" type="video/mp4">
+    </video>
+    <div class="opis">
+      <h2>Kanał dzienny i termowizja z tej samej głowicy</h2>
+      <p>Panorama z masztu 30 m, 15 lipca o 14:00. Po lewej zwykły obraz modelu, po prawej kamera chłodzona MWIR: dachy i nawierzchnie w słońcu są najgorętsze, drzewa chłodne, cienie budynków i drzew widać jako chłodniejsze plamy.</p>
+      <div class="meta"><b>24 s</b> · biały = gorący</div>
+    </div>
+  </section>
+
+  <section class="film">
+    <video controls muted playsinline loop preload="metadata" poster="filmy/2-doba-w-termowizji.jpg" aria-label="Film: doba w termowizji">
+      <source src="filmy/2-doba-w-termowizji.mp4" type="video/mp4">
+    </video>
+    <div class="opis">
+      <h2>Doba w 28 sekund</h2>
+      <p>Ten sam kadr od 10:00 do 8:00 następnego dnia. W dzień grzeją się dachy i asfalt, wieczorem nawierzchnie oddają ciepło, w nocy dachy i trawniki pod otwartym niebem są najzimniejsze, a korony drzew i ściany cieplejsze.</p>
+      <div class="meta"><b>28 s</b> · paleta żelazo · pogoda wzorcowa: bezchmurnie</div>
+    </div>
+  </section>
+
+  <section class="film">
+    <video controls muted playsinline loop preload="metadata" poster="filmy/3-zoom-i-cel.jpg" aria-label="Film: zoom ciągły i cel">
+      <source src="filmy/3-zoom-i-cel.mp4" type="video/mp4">
+    </video>
+    <div class="opis">
+      <h2>Zoom ciągły i śledzenie celu</h2>
+      <p>Zoom z 36 do 250 mm na budynek na wzgórzu, potem dron na tle chłodnego nieba: nagrzane silniki i akumulator, głowica śledzi cel, dalmierz laserowy podaje odległość.</p>
+      <div class="meta"><b>28 s</b> · kamera MWIR 640 × 512, obiektyw 36-700 mm</div>
+    </div>
+  </section>
+
+  <h2 class="sekcja">Jak powstaje obraz termowizyjny</h2>
+  <div class="siatka">
+    <div class="karta"><h3>Materiały</h3><p>Mapa 23 materiałów z widoku z góry, kolorów, klas modelu i OpenStreetMap: asfalt, kostka, trawa, dachy, ściany, szkło, blacha, korony i pnie drzew, woda, śnieg.</p></div>
+    <div class="karta"><h3>Model cieplny</h3><p>Bilans energii każdej powierzchni przez całą dobę: słońce, niebo, wiatr, parowanie, deszcz, przewodzenie w głąb i ciepło z wnętrza budynków.</p></div>
+    <div class="karta"><h3>Cienie z pamięcią</h3><p>Słońce teraz i do 11 godzin wstecz: asfalt i cegła długo pamiętają słońce, blacha reaguje od razu.</p></div>
+    <div class="karta"><h3>Niebo i atmosfera</h3><p>Zimne niebo odbija się w blasze i szybach, powietrze tłumi obraz z odległością, deszcz i mgła zacierają różnice.</p></div>
+    <div class="karta"><h3>Kamera</h3><p>Rozmycie optyki, drżenie powietrza, szum i niejednorodność detektora, automatyczne wzmocnienie, palety i symbologia głowicy obserwacyjnej.</p></div>
+    <div class="karta"><h3>Profile</h3><p>Chłodzona MWIR z zoomem ciągłym i niechłodzona LWIR. Parametry typowe dla tej klasy głowic, bo producenci nie publikują pełnych danych.</p></div>
+  </div>
+
+  <footer>
+    <p><span class="atr">Google Maps</span> · dane 3D terenu: Google (Photorealistic 3D Tiles), wyświetlane w programie Mapa3D Grabber.</p>
+    <p>Filmy pokazują możliwości programu i są oznaczone jako materiał wyłącznie promocyjny (do 30 s każdy). Pogoda w filmach jest wzorcowa (bezchmurny dzień 15 lipca), obraz kamery to symulacja, a nie nagranie z prawdziwego urządzenia.</p>
+  </footer>
+</main>
+</body>
+</html>
